@@ -1,0 +1,94 @@
+@use "base/variables" as v;
+@use "base/mixins" as m;
+
+.header {
+  background: rgb(255, 143, 112);
+  background: linear-gradient(
+    135deg,
+    rgba(255, 143, 112, 1) 0%,
+    rgba(255, 61, 83, 1) 100%
+  );
+  max-width: 144rem;
+  position: relative;
+  color: v.$white;
+  border-radius: 0 0 0 10rem;
+  overflow: hidden;
+
+  &::before {
+    content: "";
+    position: absolute;
+    background-image: url("../images/bg-pattern-intro-mobile.svg");
+    // background-size: cover;
+    background-repeat: no-repeat;
+    top: -25rem;
+    left: -30rem;
+    right: 0;
+    bottom: 0;
+  }
+
+  &__container {
+    max-width: 37.5rem;
+    position: relative;
+    margin: 0 auto;
+    padding: 5rem 2rem 15rem;
+
+    @include m.medium {
+      max-width: 144rem;
+    }
+  }
+
+  &__content {
+    padding: 10rem 2rem 0;
+  }
+
+  &__heading {
+    font-size: 3.1rem;
+    margin: 0;
+    text-align: center;
+    color: v.$white;
+  }
+
+  &__paragraph {
+    text-align: center;
+    margin: 3rem 0 5rem;
+  }
+
+  &__links {
+    display: flex;
+    // flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__link {
+    text-align: center;
+    font-weight: bolder;
+    padding: 1.5rem 2rem;
+    border-radius: 10rem;
+    width: 14rem;
+    transition: background-color 300ms ease-in-out, color 300ms ease-in-out,
+      border-color 300ms ease-in-out;
+
+    &:first-of-type {
+      color: v.$light-red;
+      background-color: v.$white;
+      border: solid 0.1rem v.$white;
+
+      &:hover {
+        background-color: v.$very-light-red;
+        border-color: v.$very-light-red;
+        color: v.$white;
+      }
+    }
+
+    &:nth-child(2) {
+      color: v.$white;
+      border: solid 0.1rem v.$white;
+
+      &:hover {
+        background-color: v.$white;
+        color: v.$light-red;
+      }
+    }
+  }
+}

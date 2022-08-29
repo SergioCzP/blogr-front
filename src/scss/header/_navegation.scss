@@ -1,0 +1,45 @@
+@use "base/variables" as v;
+@use "base/mixins" as m;
+
+.navegation {
+  //   width: 100%;
+  //   display: flex;
+  //   justify-content: space-between;
+  //   align-items: center;
+
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  align-items: flex-end;
+
+  @include m.medium {
+    // flex-flow: row wrap;
+    // justify-content: space-between;
+    // align-items: center;
+    flex-wrap: nowrap;
+    width: 100%;
+    // justify-content: space-between;
+    // align-items: center;
+  }
+
+  &__logo {
+    object-fit: contain;
+    width: 9rem;
+    height: 4rem;
+  }
+
+  &__button {
+    width: 4rem;
+    height: 3.5rem;
+
+    @include m.medium {
+      display: none;
+    }
+  }
+
+  &__menu {
+    width: 4rem;
+    height: 3.5rem;
+    object-fit: contain;
+  }
+}

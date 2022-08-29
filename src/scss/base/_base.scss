@@ -1,0 +1,47 @@
+@use "base/variables" as v;
+
+html {
+  font-size: 62.5%;
+  box-sizing: border-box;
+}
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+body {
+  font-family: v.$fontOverpass;
+  font-size: 1.6rem;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+a {
+  text-decoration: none;
+}
+
+button {
+  border: none;
+  background-color: transparent;
+  padding: 0;
+  display: block;
+
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+h1,
+h2,
+h3 {
+  font-family: v.$fontUbuntu;
+  color: v.$very-dark-blue;
+}
+
+main {
+  max-width: 144rem;
+}

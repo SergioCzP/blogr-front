@@ -1,0 +1,26 @@
+@use "base/variables" as v;
+
+// Media Queries
+@mixin medium {
+  @media (min-width: v.$medium) {
+    @content;
+  }
+}
+
+@mixin large {
+  @media (min-width: v.$large) {
+    @content;
+  }
+}
+
+@mixin extra-large {
+  @media (min-width: v.$extra-large) {
+    @content;
+  }
+}
+
+@mixin max-large {
+  @media (min-width: v.$max-large) {
+    @content;
+  }
+}

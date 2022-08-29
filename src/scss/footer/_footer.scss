@@ -1,0 +1,62 @@
+@use "base/variables" as v;
+@use "base/mixins" as m;
+
+.footer {
+  max-width: 144rem;
+  background-color: v.$very-dark-black-blue;
+  padding: 7rem 0 8rem;
+
+  &__grid {
+    margin: 0 auto;
+    max-width: 37.5rem;
+  }
+
+  &__logo {
+    width: 10rem;
+    height: 4.5rem;
+    object-fit: contain;
+    margin: 0 auto 3rem;
+  }
+
+  &__product {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+  }
+
+  &__title {
+    margin: 5rem 0 2rem;
+    color: v.$white;
+  }
+
+  &__link {
+    color: v.$grayish-blue-links;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+
+  &__attribution {
+    margin-top: 2.5rem;
+    padding: 2.5rem 0 0;
+  }
+
+  &__copyright {
+    text-align: center;
+    font-weight: bolder;
+    color: v.$white;
+    margin: 0;
+  }
+
+  &__front,
+  &__author {
+    color: v.$light-red;
+    transition: color 300ms ease-in-out;
+
+    &:hover {
+      color: v.$very-light-red;
+    }
+  }
+}

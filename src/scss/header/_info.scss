@@ -46,6 +46,7 @@
     font-weight: bolder;
     line-height: 1;
     transition: color 300ms ease-in-out;
+    color: v.$black;
 
     &:hover {
       text-decoration: underline;

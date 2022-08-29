@@ -629,7 +629,7 @@ main {
   position: absolute;
   background: rgb(44, 45, 62);
   background: linear-gradient(90deg, rgb(44, 45, 62) 0%, rgb(62, 64, 100) 100%);
-  top: 19rem;
+  top: 24rem;
   left: 0;
   right: 0;
   bottom: 0;
@@ -642,7 +642,7 @@ main {
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center -20rem;
-  top: 19rem;
+  top: 24rem;
   left: 0;
   right: 0;
   bottom: 0;

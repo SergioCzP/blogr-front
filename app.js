@@ -32,6 +32,16 @@ const switchIconMenu = function (img) {
   return img;
 };
 
+const addArrowImg = function () {
+  arrowRed.forEach((img) => {
+    img.src =
+      document.documentElement.clientWidth < 768
+        ? "build/images/icon-arrow-dark.svg"
+        : "build/images/icon-arrow-light.svg";
+  });
+};
+addArrowImg();
+
 // Add event listeners
 // Main menu
 btnNavegation.addEventListener("click", function (e) {
@@ -58,3 +68,6 @@ btnUnfold.forEach((btn) => {
     displayMenu(button.nextElementSibling);
   });
 });
+
+// resize
+window.onresize = addArrowImg;

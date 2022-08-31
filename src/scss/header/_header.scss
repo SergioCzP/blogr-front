@@ -24,6 +24,13 @@
     left: -30rem;
     right: 0;
     bottom: 0;
+
+    @include m.medium {
+      background-image: url("../images/bg-pattern-intro-desktop.svg");
+      background-size: 160%;
+      top: -33rem;
+      left: 0;
+    }
   }
 
   &__container {
@@ -34,11 +41,16 @@
 
     @include m.medium {
       max-width: 144rem;
+      padding: 7rem 5rem 15rem;
     }
   }
 
   &__content {
     padding: 10rem 2rem 0;
+
+    @include m.medium {
+      padding: 15rem 10rem 0;
+    }
   }
 
   &__heading {
@@ -58,6 +70,11 @@
     // flex-direction: column;
     justify-content: space-between;
     align-items: center;
+
+    @include m.medium {
+      justify-content: center;
+      gap: 2rem;
+    }
   }
 
   &__link {

@@ -9,6 +9,18 @@
   overflow: hidden;
   transition: all 500ms ease;
 
+  // Disappear menu
+  @include m.medium {
+    height: auto;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+    margin-top: 0;
+    pointer-events: auto;
+  }
+
   &__active {
     display: block;
     margin-top: 3.5rem;
@@ -18,17 +30,16 @@
     // width: 32.5rem;
     border-radius: 1rem;
     pointer-events: auto;
-  }
 
-  // Disappear menu
-  @include m.medium {
-    height: auto;
-    display: flex;
-    flex-flow: row nowrap;
-    justify-content: flex-end;
-    align-items: center;
-    margin-top: 0;
-    pointer-events: auto;
+    @include m.medium {
+      height: auto;
+      display: flex;
+      flex-flow: row nowrap;
+      justify-content: flex-end;
+      align-items: flex-start;
+      margin-top: 0;
+      pointer-events: auto;
+    }
   }
 
   &__container {
@@ -41,12 +52,18 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    gap: 1rem;
     width: 100%;
     padding: 1rem 0;
     font-weight: bolder;
     line-height: 1;
     transition: color 300ms ease-in-out;
     color: v.$black;
+
+    @include m.medium {
+      position: relative;
+      color: v.$white;
+    }
 
     &:hover {
       text-decoration: underline;
@@ -58,7 +75,7 @@
   }
 
   &__arrow {
-    margin-left: 1rem;
+    // margin-left: 1rem;
     width: 1rem;
     height: 1rem;
     object-fit: contain;
@@ -84,6 +101,13 @@
     background-color: v.$grayish-blue-links;
     transition: all 300ms ease-in-out;
 
+    @include m.medium {
+      background-color: v.$white;
+      position: absolute;
+      width: 10rem;
+      top: 12rem;
+    }
+
     &--active {
       height: auto;
       padding: 3rem 0;
@@ -99,6 +123,7 @@
 
     @include m.medium {
       font-weight: normal;
+      color: v.$black;
 
       &:hover {
         font-weight: bolder;
@@ -117,12 +142,29 @@
     border-top: solid 0.1rem v.$grayish-blue;
     font-weight: bolder;
 
+    @include m.medium {
+      flex-direction: row;
+      border: none;
+      padding: 0;
+      margin: 0;
+      gap: 1rem;
+    }
+
     &--link {
       padding: 1.5rem 4rem;
     }
 
     &--link:first-of-type {
       color: v.$black;
+
+      @include m.medium {
+        color: v.$white;
+        padding: 1.5rem 2.5rem;
+
+        &:hover {
+          text-decoration: underline;
+        }
+      }
     }
 
     &--link:nth-child(2) {
@@ -135,6 +177,13 @@
         rgba(255, 61, 83, 1) 100%
       );
       border-radius: 10rem;
+      transition: background 300ms ease-in-out;
+
+      @include m.medium {
+        &:hover {
+          background: rgb(255, 143, 112);
+        }
+      }
     }
   }
 }

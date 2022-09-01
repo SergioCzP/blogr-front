@@ -7,6 +7,11 @@
   margin: 0 auto;
   position: relative;
 
+  @include m.medium {
+    max-width: 144rem;
+    padding: 0;
+  }
+
   &::before {
     content: "";
     position: absolute;
@@ -21,6 +26,11 @@
     right: 0;
     bottom: 0;
     border-radius: 0 10rem 0 10rem;
+
+    @include m.medium {
+      top: 5rem;
+      bottom: 7rem;
+    }
   }
 
   &__container {
@@ -38,11 +48,26 @@
       right: 0;
       bottom: 0;
       border-radius: 0 10rem 0 10rem;
+
+      @include m.medium {
+        top: 5rem;
+        bottom: 7rem;
+        left: -20rem;
+        right: 20rem;
+        background-position: left center;
+        border-radius: 0 0 0 10rem;
+      }
     }
   }
 
   &__flex {
     position: relative;
+
+    @include m.medium {
+      display: grid;
+      align-items: center;
+      grid-template-columns: repeat(2, 1fr);
+    }
   }
 
   &__img {

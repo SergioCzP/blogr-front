@@ -740,6 +740,12 @@ main {
   margin: 0 auto;
   position: relative;
 }
+@media (min-width: 768px) {
+  .state {
+    max-width: 144rem;
+    padding: 0;
+  }
+}
 .state::before {
   content: "";
   position: absolute;
@@ -750,6 +756,12 @@ main {
   right: 0;
   bottom: 0;
   border-radius: 0 10rem 0 10rem;
+}
+@media (min-width: 768px) {
+  .state::before {
+    top: 5rem;
+    bottom: 7rem;
+  }
 }
 .state__container::before {
   content: "";
@@ -764,8 +776,25 @@ main {
   bottom: 0;
   border-radius: 0 10rem 0 10rem;
 }
+@media (min-width: 768px) {
+  .state__container::before {
+    top: 5rem;
+    bottom: 7rem;
+    left: -20rem;
+    right: 20rem;
+    background-position: left center;
+    border-radius: 0 0 0 10rem;
+  }
+}
 .state__flex {
   position: relative;
+}
+@media (min-width: 768px) {
+  .state__flex {
+    display: grid;
+    align-items: center;
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
 .state__img {
   width: 100%;

@@ -6,24 +6,56 @@
   margin: 0 auto;
   padding: 10rem 0 5rem;
 
+  @include m.medium {
+    max-width: 144rem;
+    padding: 16rem 0 10rem;
+    overflow-x: hidden;
+  }
+
   &__heading {
     margin: 0 0 5rem;
     text-align: center;
+
+    @include m.medium {
+      margin: 0;
+    }
   }
 
   &__flex {
     display: flex;
     flex-direction: column-reverse;
+
+    @include m.medium {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      padding: 12rem 0 10rem;
+    }
   }
 
   &__content {
     padding: 0 2.5rem;
+
+    @include m.medium {
+      width: 100%;
+    }
+  }
+
+  &__hero {
+    @include m.medium {
+      position: relative;
+      width: 100%;
+    }
   }
 
   &__img {
     width: 100%;
     height: 100%;
     object-fit: cover;
+
+    @include m.medium {
+      position: absolute;
+      object-position: left;
+    }
   }
 
   &__title {

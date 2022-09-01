@@ -670,22 +670,59 @@ main {
   margin: 0 auto;
   padding: 10rem 0 5rem;
 }
+@media (min-width: 768px) {
+  .design {
+    max-width: 144rem;
+    padding: 16rem 0 10rem;
+    overflow-x: hidden;
+  }
+}
 .design__heading {
   margin: 0 0 5rem;
   text-align: center;
+}
+@media (min-width: 768px) {
+  .design__heading {
+    margin: 0;
+  }
 }
 .design__flex {
   display: flex;
   flex-direction: column-reverse;
 }
+@media (min-width: 768px) {
+  .design__flex {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    padding: 12rem 0 10rem;
+  }
+}
 .design__content {
   padding: 0 2.5rem;
+}
+@media (min-width: 768px) {
+  .design__content {
+    width: 100%;
+  }
+}
+@media (min-width: 768px) {
+  .design__hero {
+    position: relative;
+    width: 100%;
+  }
 }
 .design__img {
   width: 100%;
   height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
+}
+@media (min-width: 768px) {
+  .design__img {
+    position: absolute;
+    -o-object-position: left;
+       object-position: left;
+  }
 }
 .design__title {
   text-align: center;

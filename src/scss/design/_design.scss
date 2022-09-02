@@ -38,6 +38,10 @@
     @include m.medium {
       width: 100%;
     }
+
+    @include m.large {
+      padding: 0 13rem 0 10rem;
+    }
   }
 
   &__hero {

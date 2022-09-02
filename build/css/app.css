@@ -418,11 +418,6 @@ main {
   text-align: center;
   margin: 3rem 0 5rem;
 }
-@media (min-width: 992px) {
-  .header__paragraph {
-    margin: 3.5rem 0 5.5rem;
-  }
-}
 .header__links {
   display: flex;
   justify-content: space-between;
@@ -739,6 +734,11 @@ main {
 @media (min-width: 768px) {
   .design__content {
     width: 100%;
+  }
+}
+@media (min-width: 992px) {
+  .design__content {
+    padding: 0 13rem 0 10rem;
   }
 }
 @media (min-width: 768px) {

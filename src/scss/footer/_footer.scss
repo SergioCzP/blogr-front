@@ -9,6 +9,13 @@
   &__grid {
     margin: 0 auto;
     max-width: 37.5rem;
+
+    @include m.medium {
+      max-width: 144rem;
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      justify-items: center;
+    }
   }
 
   &__logo {
@@ -16,6 +23,10 @@
     height: 4.5rem;
     object-fit: contain;
     margin: 0 auto 3rem;
+
+    @include m.medium {
+      margin: 0;
+    }
   }
 
   &__product {
@@ -28,6 +39,10 @@
   &__title {
     margin: 5rem 0 2rem;
     color: v.$white;
+
+    @include m.medium {
+      margin-top: 0;
+    }
   }
 
   &__link {

@@ -61,11 +61,19 @@
   &__title {
     text-align: center;
     margin: 5rem 0 3rem;
+
+    @include m.medium {
+      text-align: left;
+    }
   }
 
   &__paragraph {
     text-align: center;
     line-height: 1.5;
     color: v.$very-dark-grayish-blue;
+
+    @include m.medium {
+      text-align: left;
+    }
   }
 }

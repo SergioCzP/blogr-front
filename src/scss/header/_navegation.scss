@@ -24,6 +24,10 @@
     gap: 1rem;
   }
 
+  @include m.large {
+    gap: 6.5rem;
+  }
+
   &__logo {
     object-fit: contain;
     width: 9rem;

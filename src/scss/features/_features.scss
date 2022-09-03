@@ -10,6 +10,10 @@
     max-width: 144rem;
   }
 
+  @include m.large {
+    padding: 12.5rem 0 15rem 0;
+  }
+
   &__grid {
     @include m.medium {
       display: grid;
@@ -36,6 +40,10 @@
 
   &__content {
     padding: 0 2.5rem;
+
+    @include m.large {
+      padding: 0 17rem 0 3rem;
+    }
   }
 
   &__title {

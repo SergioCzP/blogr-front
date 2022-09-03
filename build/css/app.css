@@ -898,6 +898,11 @@ main {
     max-width: 144rem;
   }
 }
+@media (min-width: 992px) {
+  .features {
+    padding: 12.5rem 0 15rem 0;
+  }
+}
 @media (min-width: 768px) {
   .features__grid {
     display: grid;
@@ -924,6 +929,11 @@ main {
 }
 .features__content {
   padding: 0 2.5rem;
+}
+@media (min-width: 992px) {
+  .features__content {
+    padding: 0 17rem 0 3rem;
+  }
 }
 .features__title {
   margin: 5rem 0 3rem;

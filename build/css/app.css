@@ -809,6 +809,11 @@ main {
     bottom: 7rem;
   }
 }
+@media (min-width: 992px) {
+  .state::before {
+    bottom: 9rem;
+  }
+}
 .state__container::before {
   content: "";
   position: absolute;
@@ -830,6 +835,16 @@ main {
     right: 20rem;
     background-position: left center;
     border-radius: 0 0 0 10rem;
+  }
+}
+@media (min-width: 992px) {
+  .state__container::before {
+    display: block;
+    background-position: bottom;
+    top: 5rem;
+    bottom: -3rem;
+    left: -25rem;
+    right: 25rem;
   }
 }
 .state__flex {

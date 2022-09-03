@@ -31,6 +31,10 @@
       top: 5rem;
       bottom: 7rem;
     }
+
+    @include m.large {
+      bottom: 9rem;
+    }
   }
 
   &__container {
@@ -56,6 +60,15 @@
         right: 20rem;
         background-position: left center;
         border-radius: 0 0 0 10rem;
+      }
+
+      @include m.large {
+        display: block;
+        background-position: bottom;
+        top: 5rem;
+        bottom: -3rem;
+        left: -25rem;
+        right: 25rem;
       }
     }
   }
